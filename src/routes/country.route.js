@@ -1,4 +1,4 @@
-import { express } from "express";
+import express from "express";
 import Country from "../models/country.model.js";
 
 const router = express.Router();

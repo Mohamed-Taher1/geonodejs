@@ -41,4 +41,4 @@ const countrySchema = new Schema(
 
 const Country = model("Country", countrySchema);
 
-module.exports = Country;
+export default Country;
