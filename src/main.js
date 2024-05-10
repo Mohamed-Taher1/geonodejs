@@ -10,7 +10,7 @@ const PORT = process.env.PORT;
 const apiKey = process.env.GOOGLE_MAPS_API_KEY;
 
 // routes
-import countryRoutes from "./routes/country.route.js";
+import placeRoutes from "./routes/country.route.js";
 
 googleMapsClient.createClient({
   key: apiKey,
@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
   res.send("Server running...");
 });
 
-app.use("/country", countryRoutes);
+app.use("/place", placeRoutes);
 
 app.get("/geneva", (req, res) => {
   geocoder.geocode("Geneva, Suez, Egypt", (err, data) => {

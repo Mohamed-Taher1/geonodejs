@@ -22,14 +22,7 @@ const countrySchema = new Schema(
     location: {
       type: {
         type: String,
-        enum: [
-          "Point",
-          "LineString",
-          "Polygon",
-          "MultiPolygon",
-          "MultiPoint",
-          "MultiLineString",
-        ],
+        enum: ["Point"],
       },
       coordinates: {
         type: [Number],

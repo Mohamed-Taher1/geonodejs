@@ -45,10 +45,13 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  const { longitude, latitude, radius } = req.query; // Assuming optional query parameters
+  let { longitude, latitude, radius } = req.query;
+
+  longitude = parseFloat(longitude);
+  latitude = parseFloat(latitude);
+  radius = parseFloat(radius);
 
   try {
-    // Optional query parameter validation (adjust as needed)
     if (
       !longitude ||
       !latitude ||
